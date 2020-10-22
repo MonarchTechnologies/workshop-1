@@ -1,7 +1,7 @@
 # workshop-1
 
 Welcome to MonarchTechnologies First Workshop Project adequately named Rise!
-Rise is going to be a Management Suite with builtin tools for designed for Project-Management and Team Coordination!
+Rise is going to be a Management Suite with builtin tools designed for Project-Management and Team Coordination!
 
 The First set of task for developing Rise are as follows :
 
