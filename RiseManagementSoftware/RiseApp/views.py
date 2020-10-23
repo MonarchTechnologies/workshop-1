@@ -15,3 +15,6 @@ def user_account():
   return HttpResponse("This returns the user_account")
 def teams():
   return HttpResponse("This returns the team profile")
+
+def user_login():
+  return HttpResponse("This returns the login page")
