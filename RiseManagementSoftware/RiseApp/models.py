@@ -35,7 +35,7 @@ class Team(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     TeamName = models.CharField(max_length=20)
     SizeOfTeam = models.IntegerField()
-    TeamMembersList = [SizeOfTeam]
+    TeamMembersList = []
     #TeamMember = models.CharField(max_length=20)
 
     def __str__(self):
@@ -69,3 +69,7 @@ class Team(models.Model):
 # 
 # List[Team1[1,10], Team2[11, 20], Team3[21, 30], Team4[31, 40]]
 #  
+# Or possibly use a linkedlist of List as the datastructure?
+#
+# Needs Testing.
+#
