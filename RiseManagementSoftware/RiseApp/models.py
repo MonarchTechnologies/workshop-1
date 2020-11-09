@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.models import Group
 # Create your models here.
 
 class Project(models.Model):
@@ -31,15 +32,14 @@ class Timer(models.Model):
         return self
 
 
-class Team(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    TeamName = models.CharField(max_length=20)
-    SizeOfTeam = models.IntegerField()
-    TeamMembersList = []
-    #TeamMember = models.CharField(max_length=20)
+# class Team(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     TeamName = models.CharField(max_length=20)
+#     SizeOfTeam = models.IntegerField()
+#     #TeamMember = models.CharField(max_length=20)
 
-    def __str__(self):
-        return self
+#     def __str__(self):
+#         return self
 
 # def AddTeamMember(TeamMember):
 #     TeamMembersList.append(TeamMember)
