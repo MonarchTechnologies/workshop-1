@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class Project(models.Model):
@@ -31,6 +31,45 @@ class Timer(models.Model):
     def __str__(self):
         return self
 
+
+
+#Work todO: create a Custom User, Fix form in admin, Create a Return Case for admin, and a View for Admin!!! Ultra Important!
+class TeamMember(User):
+     
+      #User Roles
+      project_manager = 1
+      frontend_design = 2
+      frontend_dev = 3
+      backend_dev = 4
+      fullstack_dev = 5
+      system_engineer = 6
+      senior_software_engineer = 7 
+      software_engineer = 8
+      junior_software_engineer = 9
+      mobile_app_designer = 10
+      mobile_app_developer = 11
+      android_dev = 12
+      ios_dev = 13
+      web_developer = 14  
+      #Role Choices
+      Roles_Choices = (
+          (project_manager, 'project manager'),
+          (frontend_design, 'frontend designer'),
+          (frontend_dev, 'frontend developer'),
+          (backend_dev, 'backend developer'),
+          (fullstack_dev, 'fullstack developer'),
+          (system_engineer, 'systems engineer'),
+          (senior_software_engineer, 'senior software engineer'),
+          (software_engineer, 'software engineer'),
+          (junior_software_engineer, 'junior software engineer'),
+          (mobile_app_designer, 'mobile app designer'),
+          (mobile_app_developer, 'mobile app developer'),
+          (android_dev, 'android developer'),
+          (ios_dev, 'ios developer'),
+          (web_developer, 'web developer')
+      )
+
+      role = models.PositiveBigIntegerField(choices=Roles_Choices, blank=True, null=True) 
 
 # class Team(models.Model):
 #     user = models.ForeignKey(User, on_delete=models.CASCADE)
