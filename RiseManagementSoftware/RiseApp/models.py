@@ -1,26 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import GroupManager
+from django.contrib.auth.models import Group
 # Create your models here.
 
 class Project(models.Model):
+    projectTitle = models.CharField(max_length=18)
     description = models.TextField(blank=True, null=True)
-    projectTitle = models.CharField(max_length=13)
     StartDate = models.DateTimeField('StartDate')
     EndDate = models.DateTimeField('EndDate')
 
-    def __str__(self):
-        return self
 
 class Task(models.Model):
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     task_name = models.CharField(max_length=13)
     task_description = models.TextField(blank=True, null=True)
     created_date = models.DateTimeField('created_date')
     finished_date = models.DateTimeField('finished_date')
-
-    def __str__(self):
-        return self
 
 
 class Timer(models.Model):
@@ -28,12 +24,13 @@ class Timer(models.Model):
     EndTime = models.TimeField(auto_now='true')
     TotalTime = models.TimeField(default='true')
 
-    def __str__(self):
-        return self
-
-
 
 #Work todO: create a Custom User, Fix form in admin, Create a Return Case for admin, and a View for Admin!!! Ultra Important!
+class Team(Group):
+      Team_Name = models.CharField(max_length=45)
+      Team_id = models.IntegerField('id:')
+      project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
 class TeamMember(User):
      
       #User Roles
@@ -70,6 +67,8 @@ class TeamMember(User):
       )
 
       role = models.PositiveBigIntegerField(choices=Roles_Choices, blank=True, null=True) 
+      
+      team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
 # class Team(models.Model):
 #     user = models.ForeignKey(User, on_delete=models.CASCADE)
