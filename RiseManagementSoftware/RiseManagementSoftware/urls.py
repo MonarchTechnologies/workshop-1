@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include,path
 
 urlpatterns = [
-    path('RiseApp/', include('RiseApp.urls')),
     path('admin/', admin.site.urls),
+    path('', include('RiseApp_Projects.urls')),
+    path('', include('RiseApp_Teams.urls')),
 ]
