@@ -1,10 +1,8 @@
 from django.urls import include,path
 from rest_framework import routers
-from . import views
+from . import api
 
 router = routers.DefaultRouter()
-router.register('teams', views.TeamView)
+router.register('api/teams', api.TeamView)
 
-urlpatterns = [
-    path('', include(router.urls))
-]
+urlpatterns = router.urls
