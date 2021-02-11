@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import generics, permissions
 from .models import Team
 from .serializers import TeamSerializer
 # Create your views here.
