@@ -18,6 +18,7 @@ from django.urls import include,path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('RiseApp_Projects.urls')),
-    path('', include('RiseApp_Teams.urls')),
+    path('projects/', include('RiseApp_Projects.urls')),
+    path('teams/', include('RiseApp_Teams.urls')),
+    path('', include('RiseApp_frontend.urls')),
 ]

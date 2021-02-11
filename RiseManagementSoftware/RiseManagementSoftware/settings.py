@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'RiseApp_Projects.apps.RiseappProjectsConfig',
     'RiseApp_Teams.apps.RiseappTeamsConfig',
+    'RiseApp_frontend.apps.RiseappFrontendConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
