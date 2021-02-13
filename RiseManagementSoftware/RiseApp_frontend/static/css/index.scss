@@ -21,17 +21,122 @@ html, body {
 
 #app {
     width:auto;
-    height:auto;
+    height:95%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2.5px;
+    margin-right: 3px;
     color:$fg-color;
     background-color: $bg-shading-color;
 }
 
+#banner {
+    margin-top: 0;
+    padding-top: 2px;
+    margin-bottom: 1rem;
+    height: 180px;
+    width: 100%;
+    background-color: $primary-color;
+    color: $fg-color;
+    font-size:large;
+    align-items: center;
+    justify-content: center;
+}
+
+
 #button-rounded-one{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 26px;
+    font-size: large;
+    overflow: hidden;
+    border: none;
+    align-items: center;
     justify-content: center;
     color: $fg-color;
     background-color: $primary-color;
-    box-shadow: 0 0 3rem $bg-shading-color;
+    box-shadow: 0 0 5px $primary-color;
 }
+
+#nav {
+        margin: 0;
+        padding: 0;
+        width: 195px;
+        top:0;
+        left:0;
+        background-color: $bg-color;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        padding-top: 140px;
+}
+
+#nav a{
+    margin-top:3.5rem;
+    padding: 10px 80px 8px 8px;
+    font-size: 20px;
+    text-decoration: none;
+    color: $fg-color;
+    display: block;
+}
+
+#nav a.hover {
+    box-shadow: 0px 0px 3px $primary-color;
+    color: $fg-color;
+}
+
+#nav li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+//sidenav? didn't work, may need to try playing with it some more
+// .sidebar {
+//     margin: 0;
+//     padding: 0;
+//     width: 200px;
+//     background-color: $bg-shading-color;
+//     position: fixed;
+//     height: 100%;
+//     overflow: auto;
+//   }
+  
+//   .sidebar a {
+//     display: block;
+//     color: $bg-color;
+//     padding: 16px;
+//     text-decoration: none;
+//   }
+   
+//   .sidebar a.active {
+//     background-color: $bg-shading-color;
+//     color: $fg-color;
+//   }
+  
+//   .sidebar a:hover:not(.active) {
+//     background-color:$fg-color;
+//     color: $primary-color;
+//   }
+  
+//   div.content {
+//     margin-left: 200px;
+//     padding: 1px 16px;
+//     height: 1000px;
+//   }
+  
+//   @media screen and (max-width: 700px) {
+//     .sidebar {
+//       width: 100%;
+//       height: auto;
+//       position: relative;
+//     }
+//     .sidebar a {float: left;}
+//     div.content {margin-left: 0;}
+//   }
+  
+//   @media screen and (max-width: 400px) {
+//     .sidebar a {
+//       text-align: center;
+//       float: none;
+//     }
+// }

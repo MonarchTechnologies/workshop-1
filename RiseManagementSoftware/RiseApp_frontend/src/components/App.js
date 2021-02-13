@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { FontAwesomeIcon } from '@fortawesome/fontawesome-free';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import '../../static/css/index.scss';
-import mui from '@material-ui/core';
-import icons from '@material-ui/icons';
-import roundedButton from './rounded-button';
+import RoundedButton from './roundedButton';
+import SideNav from './Sidenav';
 
 export default class App extends Component {
-   contstructor(props){
+   Constructor(props){
        Super(props);
    }
 
    render(){
        return(
          <div>
-         <h1>Hello, Fullstack World</h1>
-         <p>how are you?</p>
-         <roundedButton message="click me" />
+         <div id="banner">
+         <h1>Rise Management System</h1>
+         <p></p>
+         </div>
+         <div id="grid">
+         <SideNav />
+         <RoundedButton message="click me"/>
+         </div>
          </div>
        )
    }
